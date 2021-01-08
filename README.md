@@ -1,7 +1,7 @@
 ![Java CI with Gradle](https://github.com/csh0711/quarkus-kotlin-mockk/workflows/Java%20CI%20with%20Gradle/badge.svg) 
 [![Pure Kotlin](https://img.shields.io/badge/100%25-kotlin-blue.svg)](https://kotlinlang.org/)
 
-# Quarkus app with test written with Junit 5 and MockK
+# Quarkus Kotlin app with tests using Junit 5 and MockK
 
 Sample of a simple [Quarkus](https://quarkus.io/) application written in [Kotlin](https://kotlinlang.org/). 
 Shows how [Junit 5](https://junit.org/junit5/) and [MockK](https://mockk.io/) may be used for mocking CDI beans.
