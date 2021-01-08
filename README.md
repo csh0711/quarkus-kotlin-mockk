@@ -7,7 +7,7 @@ Sample of a simple [Quarkus](https://quarkus.io/) application written in [Kotlin
 Shows how [Junit 5](https://junit.org/junit5/) and [MockK](https://mockk.io/) may be used for mocking CDI beans.
 
 ## Scenario
-<img src="quarkus-kotlin-mockk.png" alt="Scenario" width="600"/>
+<img src="quarkus-kotlin-mockk.png" alt="Scenario" width="700"/>
 
 ## Running and packaging the application
 
