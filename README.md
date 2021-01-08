@@ -1,8 +1,16 @@
-# quarkus-kotlin-mockk project
+![Java CI with Gradle](https://github.com/csh0711/quarkus-kotlin-mockk/workflows/Java%20CI%20with%20Gradle/badge.svg) 
+[![Pure Kotlin](https://img.shields.io/badge/100%25-kotlin-blue.svg)](https://kotlinlang.org/)
 
-This project uses Quarkus, the Supersonic Subatomic Java Framework.
+# Quarkus app with test written with Junit 5 and MockK
 
-If you want to learn more about Quarkus, please visit its website: https://quarkus.io/ .
+Sample of a simple [Quarkus](https://quarkus.io/) application written in [Kotlin](https://kotlinlang.org/). 
+Shows how [Junit 5](https://junit.org/junit5/) and [MockK](https://mockk.io/) may be used for mocking CDI beans.
+
+# Scenario
+<img src="quarkus-kotlin-mockk.png" alt="Scenario" width="600"/>
+
+## Running the application in your IDE (e.g. IntelliJ)
+You can run your application by starting the `MyApplication.kt`.
 
 ## Running the application in dev mode
 
@@ -27,22 +35,3 @@ If you want to build an _über-jar_, execute the following command:
 
 The application is now runnable using `java -jar build/quarkus-kotlin-mockk-1.0.0-SNAPSHOT-runner.jar`.
 
-## Creating a native executable
-
-You can create a native executable using: 
-```shell script
-./gradlew build -Dquarkus.package.type=native
-```
-
-Or, if you don't have GraalVM installed, you can run the native executable build in a container using: 
-```shell script
-./gradlew build -Dquarkus.package.type=native -Dquarkus.native.container-build=true
-```
-
-You can then execute your native executable with: `./build/quarkus-kotlin-mockk-1.0.0-SNAPSHOT-runner`
-
-If you want to learn more about building native executables, please consult https://quarkus.io/guides/gradle-tooling.
-
-# Command Mode
-
-Guide: https://quarkus.io/guides/command-mode-reference

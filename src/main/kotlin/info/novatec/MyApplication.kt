@@ -5,8 +5,8 @@ import io.quarkus.runtime.annotations.QuarkusMain
 import javax.ws.rs.core.Application
 
 class MyApplication : Application() {
-    companion object {
 
+    companion object {
         @JvmStatic
         fun main(args: Array<String>) {
             Quarkus.run(*args)
