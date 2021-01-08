@@ -6,20 +6,22 @@
 Sample of a simple [Quarkus](https://quarkus.io/) application written in [Kotlin](https://kotlinlang.org/). 
 Shows how [Junit 5](https://junit.org/junit5/) and [MockK](https://mockk.io/) may be used for mocking CDI beans.
 
-# Scenario
+## Scenario
 <img src="quarkus-kotlin-mockk.png" alt="Scenario" width="600"/>
 
-## Running the application in your IDE (e.g. IntelliJ)
+## Running and packaging the application
+
+### Running the application in your IDE (e.g. IntelliJ)
 You can run your application by starting the `MyApplication.kt`.
 
-## Running the application in dev mode
+### Running the application in dev mode
 
 You can run your application in dev mode that enables live coding using:
 ```shell script
 ./gradlew quarkusDev
 ```
 
-## Packaging and running the application
+### Packaging and running the application
 
 The application can be packaged using:
 ```shell script
