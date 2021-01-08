@@ -18,7 +18,7 @@ dependencies {
     implementation 'io.quarkus:quarkus-resteasy-jackson'
     implementation 'com.fasterxml.jackson.module:jackson-module-kotlin'
 
-    testCompile 'io.mockk:mockk:1.10.4'
+    testCompile 'io.mockk:mockk:1.10.2'
     testCompile 'org.assertj:assertj-core:3.18.1'
     testImplementation 'io.quarkus:quarkus-junit5'
     testImplementation 'io.rest-assured:kotlin-extensions'
