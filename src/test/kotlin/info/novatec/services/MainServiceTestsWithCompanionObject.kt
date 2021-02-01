@@ -10,11 +10,22 @@ import org.junit.jupiter.api.Test
 import javax.enterprise.inject.Default
 import javax.inject.Inject
 
+/**
+ * This test class shows how to test a Quarkus CDI bean with JUnit and MockK.
+ *
+ * In this example a Kotlin companion object is used.
+ * For other possible implementations see [MainServiceTestsWithBeforeEach]
+ * and [MainServiceTestsWithTestPerClass].
+ *
+ * @author Christian Schwörer
+ * @see <a href="https://www.novatec-gmbh.de/blog/">Associated Blog Post</a
+ */
 @QuarkusTest
-class MainServiceTests {
+class MainServiceTestsWithCompanionObject {
 
     companion object {
         val subService: SubService = mockk()
+
         @BeforeAll
         @JvmStatic
         fun setupMocks() {
@@ -22,21 +33,16 @@ class MainServiceTests {
         }
     }
 
-    // Old approach using @Mock which might affect other test classes (see https://quarkus.io/blog/mocking/)
-    // @Mock
-    // fun subServiceA(): SubService = subService
-
     @Inject
     @field: Default
     lateinit var testee: MainService
 
     @Test
-    fun `run test with mocked sub services`() {
-        every { subService.sayHello() } returns "SubService A mocked"
+    fun `call sayHello() test with mocked sub service`() {
+        every { subService.sayHello() } returns "Hello from MOCKED SubService"
 
         val result = testee.sayHello()
 
-        assertThat(result).isEqualTo("Hello from the real MainService - SubService A mocked")
+        assertThat(result).isEqualTo("Hello from the REAL MainService - Hello from MOCKED SubService")
     }
-
 }

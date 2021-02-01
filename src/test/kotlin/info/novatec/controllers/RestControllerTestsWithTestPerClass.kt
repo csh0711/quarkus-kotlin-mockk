@@ -1,4 +1,4 @@
-package info.novatec.controller
+package info.novatec.controllers
 
 import info.novatec.JsonMatcher
 import info.novatec.services.MainService
@@ -15,9 +15,19 @@ import javax.ws.rs.core.MediaType
 
 val mainService: MainService = mockk()
 
+/**
+ * This test class shows how to test a Quarkus RestController with JUnit and MockK.
+ *
+ * In this example the `@TestInstance(PER_CLASS)` annotation is used.
+ * For other possible implementations see [RestControllerTestsWithCompanionObject]
+ * and [RestControllerTestsWithBeforeEach].
+ *
+ * @author Christian Schwörer
+ * @see <a href="https://www.novatec-gmbh.de/blog/">Associated Blog Post</a>
+ */
 @QuarkusTest
 @TestInstance(PER_CLASS)
-class RestControllerTests {
+class RestControllerTestsWithTestPerClass {
 
     @BeforeAll
     fun setupMocks() {
@@ -25,10 +35,10 @@ class RestControllerTests {
     }
 
     @Test
-    fun `GET - hello`() {
-        every { mainService.sayHello() } returns "Hello from mocked main service"
+    fun `GET - hello (with mocked main service)`() {
+        every { mainService.sayHello() } returns "Hello from MOCKED main service"
 
-        val expectedJson = """{ "greeting": "Hello from mocked main service" }"""
+        val expectedJson = """{ "greeting": "Hello from MOCKED main service" }"""
 
         given()
             .`when`()["/hello"]
@@ -38,5 +48,4 @@ class RestControllerTests {
             .body(JsonMatcher.jsonEqualTo(expectedJson))
 
     }
-
 }
