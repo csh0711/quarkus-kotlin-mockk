@@ -43,6 +43,15 @@ class RestControllerTestsWithBeforeEach {
             .statusCode(200)
             .contentType(APPLICATION_JSON)
             .body(JsonMatcher.jsonEqualTo(expectedJson))
+    }
 
+    @Test
+    fun `GET - exception is mapped to status 500`() {
+        every { mainService.sayHello() } throws RuntimeException()
+
+        given()
+            .`when`()["/hello"]
+            .then()
+            .statusCode(500)
     }
 }
