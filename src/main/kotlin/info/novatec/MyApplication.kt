@@ -1,9 +1,14 @@
 package info.novatec
 
 import io.quarkus.runtime.Quarkus
-import io.quarkus.runtime.annotations.QuarkusMain
 import javax.ws.rs.core.Application
 
+/**
+ * Exemplary Quarkus application.
+ *
+ * @author Christian Schwörer
+ * @see <a href="https://www.novatec-gmbh.de/blog/testing-quarkus-with-kotlin-junit-and-mockk">Novatec Blog Post</a>
+ */
 class MyApplication : Application() {
 
     companion object {

@@ -18,7 +18,7 @@ import javax.inject.Inject
  * and [MainServiceTestsWithTestPerClass].
  *
  * @author Christian Schwörer
- * @see <a href="https://www.novatec-gmbh.de/blog/">Associated Blog Post</a
+ * @see <a href="https://www.novatec-gmbh.de/blog/testing-quarkus-with-kotlin-junit-and-mockk">Novatec Blog Post</a>
  */
 @QuarkusTest
 class MainServiceTestsWithCompanionObject {
@@ -38,7 +38,7 @@ class MainServiceTestsWithCompanionObject {
     lateinit var testee: MainService
 
     @Test
-    fun `call sayHello() test with mocked sub service`() {
+    fun `call sayHello() with mocked sub service`() {
         every { subService.sayHello() } returns "Hello from MOCKED SubService"
 
         val result = testee.sayHello()

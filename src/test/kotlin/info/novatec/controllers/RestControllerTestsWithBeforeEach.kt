@@ -19,7 +19,7 @@ import javax.ws.rs.core.MediaType.APPLICATION_JSON
  * and [RestControllerTestsWithTestPerClass].
  *
  * @author Christian Schwörer
- * @see <a href="https://www.novatec-gmbh.de/blog/">Associated Blog Post</a>
+ * @see <a href="https://www.novatec-gmbh.de/blog/testing-quarkus-with-kotlin-junit-and-mockk">Novatec Blog Post</a>
  */
 @QuarkusTest
 class RestControllerTestsWithBeforeEach {
