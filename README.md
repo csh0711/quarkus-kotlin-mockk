@@ -10,7 +10,6 @@ Shows how [Junit 5](https://junit.org/junit5/) and [MockK](https://mockk.io/) ma
 https://www.novatec-gmbh.de/blog/testing-quarkus-with-kotlin-junit-and-mockk
 
 + [Scenario](#scenario)
-+ [Setup](#setup)
 + [Running and packaging the application](#running-and-packaging-the-application)
 + [Executing the tests](#executing-the-tests)
     
@@ -50,4 +49,4 @@ The tests can be either executed by running the Gradle command
 ```
 ./gradlew clean test
 ```
-Or directly as usual in the IDE, e.g. IntelliJ. `Run` > `RestControllerTestsWithBeforeEach.kt` etc.
+Or directly as usual in the IDE, e.g. IntelliJ. `Run` > `RestControllerTestsWithBeforeEach.kt etc.
