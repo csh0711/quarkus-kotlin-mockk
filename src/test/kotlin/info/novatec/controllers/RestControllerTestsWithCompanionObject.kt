@@ -12,7 +12,7 @@ import org.junit.jupiter.api.Test
 import javax.ws.rs.core.MediaType
 
 /**
- * This test class shows how to test a Quarkus RestController with JUnit and MockK.
+ * This test class shows how to test a Quarkus RestController with JUnit and MockK a QuarkusTest.
  *
  * In this example a Kotlin companion object is used.
  * For other possible implementations see [RestControllerTestsWithTestPerClass] and

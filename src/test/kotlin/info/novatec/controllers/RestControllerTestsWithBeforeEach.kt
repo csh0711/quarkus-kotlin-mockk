@@ -12,7 +12,7 @@ import org.junit.jupiter.api.Test
 import javax.ws.rs.core.MediaType.APPLICATION_JSON
 
 /**
- * This test class shows how to test a Quarkus RestController with JUnit and MockK.
+ * This test class shows how to test a Quarkus RestController with JUnit and MockK in a QuarkusTest.
  *
  * In this example the `@BeforeEach` annotation is used instead of `@BeforeAll`.
  * For other possible implementations see [RestControllerTestsWithCompanionObject]

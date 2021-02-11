@@ -16,7 +16,7 @@ import javax.ws.rs.core.MediaType
 val mainService: MainService = mockk()
 
 /**
- * This test class shows how to test a Quarkus RestController with JUnit and MockK.
+ * This test class shows how to test a Quarkus RestController with JUnit and MockK a QuarkusTest.
  *
  * In this example the `@TestInstance(PER_CLASS)` annotation is used.
  * For other possible implementations see [RestControllerTestsWithCompanionObject]
