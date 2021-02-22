@@ -10,7 +10,6 @@ import io.quarkus.test.junit.TestProfile
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.BeforeAll
 import org.junit.jupiter.api.Test
-import javax.enterprise.inject.Default
 import javax.inject.Inject
 
 /**
@@ -38,7 +37,6 @@ class MainServiceIntTestsWithCompanionObject {
     }
 
     @Inject
-    @field: Default
     lateinit var testee: MainService
 
     @Test

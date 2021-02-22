@@ -14,7 +14,6 @@ import org.junit.jupiter.api.BeforeAll
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.TestInstance
 import org.junit.jupiter.api.TestInstance.Lifecycle.PER_CLASS
-import javax.enterprise.inject.Default
 import javax.inject.Inject
 
 val subService: SubService = mockk()
@@ -41,7 +40,6 @@ class MainServiceTestsWithBeforeEach {
     }
 
     @Inject
-    @field: Default
     lateinit var testee: MainService
 
     @Test
