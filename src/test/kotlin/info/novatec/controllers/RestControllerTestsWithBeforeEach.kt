@@ -32,7 +32,7 @@ class RestControllerTestsWithBeforeEach {
     }
 
     @Test
-    fun `GET - hello (with mocked main service)`() {
+    fun `GET hello - with mocked main service`() {
         every { mainService.sayHello() } returns "Hello from MOCKED main service"
 
         val expectedJson = """{ "greeting": "Hello from MOCKED main service" }"""
@@ -46,7 +46,7 @@ class RestControllerTestsWithBeforeEach {
     }
 
     @Test
-    fun `GET - exception is mapped to status 500`() {
+    fun `GET hello - exception is mapped to status 500`() {
         every { mainService.sayHello() } throws RuntimeException()
 
         given()

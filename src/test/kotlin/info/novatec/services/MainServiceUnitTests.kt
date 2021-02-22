@@ -18,7 +18,7 @@ class MainServiceUnitTests {
     private val testee = MainService(subService)
 
     @Test
-    fun `call sayHello() with mocked sub service`() {
+    fun `call sayHello with mocked sub service`() {
         every { subService.sayHello() } returns "Hello from MOCKED SubService"
 
         val result = testee.sayHello()

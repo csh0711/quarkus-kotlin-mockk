@@ -1,5 +1,6 @@
 package info.novatec.services
 
+import io.quarkus.cache.CacheResult
 import javax.enterprise.context.ApplicationScoped
 
 /**
@@ -12,5 +13,6 @@ import javax.enterprise.context.ApplicationScoped
 class MainService(
     private val subService: SubService
 ) {
+    @CacheResult(cacheName = "mainservice-sayhello-cache")
     fun sayHello() = "Hello from the REAL MainService - ${subService.sayHello()}"
 }
