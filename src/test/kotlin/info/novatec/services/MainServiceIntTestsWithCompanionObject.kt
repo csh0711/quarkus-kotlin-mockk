@@ -16,8 +16,8 @@ import javax.inject.Inject
  * This test class shows how to test a Quarkus CDI bean with JUnit and MockK in a QuarkusTest.
  *
  * In this example a Kotlin companion object is used.
- * For other possible implementations see [MainServiceTestsWithBeforeEach]
- * and [MainServiceTestsWithTestPerClass].
+ * For other possible implementations see [MainServiceIntTestsWithCompanionObject],
+ * [MainServiceIntTestsWithMockKExtension] and [MainServiceTestsWithTestPerClass].
  *
  * @author Christian Schwörer
  * @see <a href="https://www.novatec-gmbh.de/blog/testing-quarkus-with-kotlin-junit-and-mockk">Novatec Blog Post</a>

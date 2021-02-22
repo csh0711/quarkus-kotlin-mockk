@@ -22,6 +22,7 @@ dependencies {
     testCompile 'io.mockk:mockk:1.10.5'
     testCompile 'org.assertj:assertj-core:3.19.0'
     testImplementation 'io.quarkus:quarkus-junit5'
+    testImplementation 'io.quarkiverse.mockk:quarkus-junit5-mockk:0.2.0' //Used in MainServiceIntTestsWithMockKExtension
     testImplementation 'io.rest-assured:kotlin-extensions'
     testCompile 'org.skyscreamer:jsonassert:1.5.0'
 }

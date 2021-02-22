@@ -1,40 +1,38 @@
 package info.novatec.services
 
+
 import io.mockk.every
-import io.mockk.mockk
 import io.mockk.verify
-import io.quarkus.test.junit.QuarkusMock
+import io.quarkiverse.test.junit.mockk.InjectMock
+import io.quarkus.test.TestTransaction
 import io.quarkus.test.junit.QuarkusTest
 import io.quarkus.test.junit.QuarkusTestProfile
 import io.quarkus.test.junit.TestProfile
 import org.assertj.core.api.Assertions.assertThat
-import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import javax.inject.Inject
 
 /**
  * This test class shows how to test a Quarkus CDI bean with JUnit and MockK in a QuarkusTest.
  *
- * In this example the `@BeforeEach` annotation is used instead of `@BeforeAll`.
- * For other possible implementations see [MainServiceIntTestsWithCompanionObject],
- * [MainServiceIntTestsWithMockKExtension] and [MainServiceTestsWithTestPerClass].
+ *
+ * This example uses the [Quarkus JUnit5 MockK Extension](https://github.com/quarkiverse/quarkus-mockk).
+ * For other possible implementations see [MainServiceTestsWithBeforeEach],
+ * [MainServiceIntTestsWithTestPerClass] and [MainServiceIntTestsWithCompanionObject].
  *
  * @author Christian Schwörer
  * @see <a href="https://www.novatec-gmbh.de/blog/testing-quarkus-with-kotlin-junit-and-mockk">Novatec Blog Post</a>
  */
 @QuarkusTest
-@TestProfile(MainServiceTestsWithTestPerClassProfile::class) // Only needed as MainServiceTests exists several times
-class MainServiceTestsWithTestPerClass {
-
-    private val subService: SubService = mockk()
-
-    @BeforeEach
-    fun setupMocks() {
-        QuarkusMock.installMockForType(subService, SubService::class.java)
-    }
+@TestTransaction
+@TestProfile(MainServiceIntTestsWithMockKExtensionProfile::class) // Only needed as MainServiceTest exists several times
+class MainServiceIntTestsWithMockKExtension {
 
     @Inject
     lateinit var testee: MainService
+
+    @InjectMock
+    lateinit var subService: SubService
 
     @Test
     fun `call sayHello with mocked sub service and make sure caching works`() {
@@ -58,4 +56,4 @@ class MainServiceTestsWithTestPerClass {
  *
  * @see <a href="https://quarkus.io/blog/quarkus-test-profiles/">Quarkus Blog</a>
  */
-class MainServiceTestsWithTestPerClassProfile : QuarkusTestProfile
+class MainServiceIntTestsWithMockKExtensionProfile : QuarkusTestProfile
