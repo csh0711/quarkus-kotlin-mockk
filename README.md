@@ -49,4 +49,6 @@ The tests can be either executed by running the Gradle command
 ```
 ./gradlew clean test
 ```
-Or directly as usual in the IDE, e.g. IntelliJ. `Run` > `RestControllerTestsWithBeforeEach.kt etc.
+Or directly as usual in the IDE, e.g. IntelliJ. 
+E.g. `Run` > `RestControllerTestsWithBeforeEach.kt` etc.
+
