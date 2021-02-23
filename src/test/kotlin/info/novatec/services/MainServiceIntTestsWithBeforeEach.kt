@@ -23,8 +23,8 @@ import javax.inject.Inject
  * @see <a href="https://www.novatec-gmbh.de/blog/testing-quarkus-with-kotlin-junit-and-mockk">Novatec Blog Post</a>
  */
 @QuarkusTest
-@TestProfile(MainServiceTestsWithTestPerClassProfile::class) // Only needed as MainServiceTests exists several times
-class MainServiceTestsWithTestPerClass {
+@TestProfile(MainServiceIntTestsWithBeforeEachProfile::class) // Only needed as MainServiceTests exists several times
+class MainServiceIntTestsWithBeforeEach {
 
     private val subService: SubService = mockk()
 
@@ -58,4 +58,4 @@ class MainServiceTestsWithTestPerClass {
  *
  * @see <a href="https://quarkus.io/blog/quarkus-test-profiles/">Quarkus Blog</a>
  */
-class MainServiceTestsWithTestPerClassProfile : QuarkusTestProfile
+class MainServiceIntTestsWithBeforeEachProfile : QuarkusTestProfile

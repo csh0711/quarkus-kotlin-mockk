@@ -15,7 +15,6 @@ import javax.inject.Inject
 /**
  * This test class shows how to test a Quarkus CDI bean with JUnit and MockK in a QuarkusTest.
  *
- *
  * This example uses the [Quarkus JUnit5 MockK Extension](https://github.com/quarkiverse/quarkus-mockk).
  * For other possible implementations see [MainServiceTestsWithBeforeEach],
  * [MainServiceIntTestsWithTestPerClass] and [MainServiceIntTestsWithCompanionObject].

@@ -22,8 +22,8 @@ val subService: SubService = mockk()
  * This test class shows how to test a Quarkus CDI bean with JUnit and MockK in a QuarkusTest.
  *
  * In this example the `@TestInstance(PER_CLASS)` annotation is used.
- * For other possible implementations see [MainServiceTestsWithBeforeEach]
- * and [MainServiceIntTestsWithCompanionObject].
+ * For other possible implementations see [MainServiceIntTestsWithBeforeEach],
+ * [MainServiceIntTestsWithMockKExtension] and [MainServiceIntTestsWithCompanionObject].
  *
  * @author Christian Schwörer
  * @see <a href="https://www.novatec-gmbh.de/blog/testing-quarkus-with-kotlin-junit-and-mockk">Novatec Blog Post</a>
@@ -31,8 +31,8 @@ val subService: SubService = mockk()
 @QuarkusTest
 @TestTransaction
 @TestInstance(PER_CLASS)
-@TestProfile(MainServiceTestsWithBeforeEachProfile::class) // Only needed as MainServiceTests exists several times
-class MainServiceTestsWithBeforeEach {
+@TestProfile(MainServiceIntTestsWithTestPerClassProfile::class) // Only needed as MainServiceTests exists several times
+class MainServiceIntTestsWithTestPerClass {
 
     @BeforeAll
     fun setupMocks() {
@@ -64,4 +64,4 @@ class MainServiceTestsWithBeforeEach {
  *
  * @see <a href="https://quarkus.io/blog/quarkus-test-profiles/">Quarkus Blog</a>
  */
-class MainServiceTestsWithBeforeEachProfile : QuarkusTestProfile
+class MainServiceIntTestsWithTestPerClassProfile : QuarkusTestProfile
