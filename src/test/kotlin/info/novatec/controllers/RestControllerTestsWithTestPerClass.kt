@@ -19,8 +19,8 @@ val mainService: MainService = mockk()
  * This test class shows how to test a Quarkus RestController with JUnit and MockK a QuarkusTest.
  *
  * In this example the `@TestInstance(PER_CLASS)` annotation is used.
- * For other possible implementations see [RestControllerTestsWithCompanionObject]
- * and [RestControllerTestsWithBeforeEach].
+ * For other possible implementations see [RestControllerTestsWithCompanionObject],
+ * [RestControllerTestsWithMockKExtension] and [RestControllerTestsWithBeforeEach].
  *
  * @author Christian Schwörer
  * @see <a href="https://www.novatec-gmbh.de/blog/testing-quarkus-with-kotlin-junit-and-mockk">Novatec Blog Post</a>

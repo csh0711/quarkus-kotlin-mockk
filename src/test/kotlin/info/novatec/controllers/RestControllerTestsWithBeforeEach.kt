@@ -15,8 +15,8 @@ import javax.ws.rs.core.MediaType.APPLICATION_JSON
  * This test class shows how to test a Quarkus RestController with JUnit and MockK in a QuarkusTest.
  *
  * In this example the `@BeforeEach` annotation is used instead of `@BeforeAll`.
- * For other possible implementations see [RestControllerTestsWithCompanionObject]
- * and [RestControllerTestsWithTestPerClass].
+ * For other possible implementations see [RestControllerTestsWithCompanionObject],
+ * [RestControllerTestsWithMockKExtension] and [RestControllerTestsWithTestPerClass].
  *
  * @author Christian Schwörer
  * @see <a href="https://www.novatec-gmbh.de/blog/testing-quarkus-with-kotlin-junit-and-mockk">Novatec Blog Post</a>
