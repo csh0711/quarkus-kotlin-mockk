@@ -28,10 +28,10 @@ import javax.inject.Inject
 class MainServiceIntTestsWithMockKExtension {
 
     @Inject
-    lateinit var testee: MainService
+    private lateinit var testee: MainService
 
     @InjectMock
-    lateinit var subService: SubService
+    private lateinit var subService: SubService
 
     @Test
     fun `call sayHello with mocked sub service and make sure caching works`() {

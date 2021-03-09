@@ -23,7 +23,7 @@ import javax.ws.rs.core.MediaType
 class RestControllerTestsWithMockKExtension {
 
     @InjectMock
-    lateinit var mainService: MainService
+    private lateinit var mainService: MainService
 
     @Test
     fun `GET hello - with mocked main service`() {
