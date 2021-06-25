@@ -1,6 +1,6 @@
 plugins {
-    id 'org.jetbrains.kotlin.jvm' version "1.4.30"
-    id "org.jetbrains.kotlin.plugin.allopen" version "1.4.30"
+    id 'org.jetbrains.kotlin.jvm' version "1.4.32"
+    id "org.jetbrains.kotlin.plugin.allopen" version "1.4.32"
     id 'io.quarkus'
 }
 
@@ -19,8 +19,8 @@ dependencies {
     implementation 'io.quarkus:quarkus-resteasy-jackson'
     implementation 'com.fasterxml.jackson.module:jackson-module-kotlin'
 
-    testCompile 'io.mockk:mockk:1.10.5'
-    testCompile 'org.assertj:assertj-core:3.19.0'
+    testCompile 'io.mockk:mockk:1.11.0'
+    testCompile 'org.assertj:assertj-core:3.20.2'
     testImplementation 'io.quarkus:quarkus-junit5'
     testImplementation 'io.quarkiverse.mockk:quarkus-junit5-mockk:0.2.0' //Used in MainServiceIntTestsWithMockKExtension
     testImplementation 'io.rest-assured:kotlin-extensions'
