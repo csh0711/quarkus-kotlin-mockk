@@ -18,9 +18,6 @@ https://www.novatec-gmbh.de/blog/testing-quarkus-with-kotlin-junit-and-mockk
 
 ## Running and packaging the application
 
-### Running the application in your IDE (e.g. IntelliJ)
-You can run your application by starting the `MyApplication.kt`.
-
 ### Running the application in dev mode
 
 You can run your application in dev mode that enables live coding using:
