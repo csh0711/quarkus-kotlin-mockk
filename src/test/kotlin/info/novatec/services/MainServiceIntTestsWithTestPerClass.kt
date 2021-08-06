@@ -4,7 +4,6 @@ package info.novatec.services
 import io.mockk.every
 import io.mockk.mockk
 import io.mockk.verify
-import io.quarkus.test.TestTransaction
 import io.quarkus.test.junit.QuarkusMock
 import io.quarkus.test.junit.QuarkusTest
 import io.quarkus.test.junit.QuarkusTestProfile
@@ -29,7 +28,6 @@ val subService: SubService = mockk()
  * @see <a href="https://www.novatec-gmbh.de/blog/testing-quarkus-with-kotlin-junit-and-mockk">Novatec Blog Post</a>
  */
 @QuarkusTest
-@TestTransaction
 @TestInstance(PER_CLASS)
 @TestProfile(MainServiceIntTestsWithTestPerClassProfile::class) // Only needed as MainServiceTests exists several times
 class MainServiceIntTestsWithTestPerClass {

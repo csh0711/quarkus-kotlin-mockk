@@ -4,7 +4,6 @@ package info.novatec.services
 import io.mockk.every
 import io.mockk.verify
 import io.quarkiverse.test.junit.mockk.InjectMock
-import io.quarkus.test.TestTransaction
 import io.quarkus.test.junit.QuarkusTest
 import io.quarkus.test.junit.QuarkusTestProfile
 import io.quarkus.test.junit.TestProfile
@@ -16,14 +15,13 @@ import javax.inject.Inject
  * This test class shows how to test a Quarkus CDI bean with JUnit and MockK in a QuarkusTest.
  *
  * This example uses the [Quarkus JUnit5 MockK Extension](https://github.com/quarkiverse/quarkus-mockk).
- * For other possible implementations see [MainServiceTestsWithBeforeEach],
+ * For other possible implementations see [MainServiceIntTestsWithBeforeEach],
  * [MainServiceIntTestsWithTestPerClass] and [MainServiceIntTestsWithCompanionObject].
  *
  * @author Christian Schwörer
  * @see <a href="https://www.novatec-gmbh.de/blog/testing-quarkus-with-kotlin-junit-and-mockk">Novatec Blog Post</a>
  */
 @QuarkusTest
-@TestTransaction
 @TestProfile(MainServiceIntTestsWithMockKExtensionProfile::class) // Only needed as MainServiceTest exists several times
 class MainServiceIntTestsWithMockKExtension {
 
