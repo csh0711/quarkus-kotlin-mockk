@@ -19,10 +19,10 @@ dependencies {
     implementation 'io.quarkus:quarkus-resteasy-jackson'
     implementation 'com.fasterxml.jackson.module:jackson-module-kotlin'
 
-    testCompile 'io.mockk:mockk:1.12.1'
-    testCompile 'org.assertj:assertj-core:3.21.0'
+    testCompile 'io.mockk:mockk:1.12.2'
+    testCompile 'org.assertj:assertj-core:3.22.0'
     testImplementation 'io.quarkus:quarkus-junit5'
-    testImplementation 'io.quarkiverse.mockk:quarkus-junit5-mockk:0.2.0' //Used in MainServiceIntTestsWithMockKExtension
+    testImplementation 'io.quarkiverse.mockk:quarkus-junit5-mockk:0.3.0' //Used in MainServiceIntTestsWithMockKExtension
     testImplementation 'io.rest-assured:kotlin-extensions'
     testCompile 'org.skyscreamer:jsonassert:1.5.0'
 }
